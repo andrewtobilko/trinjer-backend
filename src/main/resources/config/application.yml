@@ -1,0 +1,11 @@
+app:
+    authentication:
+        headerType: X-AUTH-TOKEN
+spring:
+    profiles:
+        active: development
+    data:
+        rest:
+            base-path: /api
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect

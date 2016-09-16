@@ -1,0 +1,10 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/trinjer
+        username: trinjer
+        password: 5hQ7L3YTeTu2c2Hw
+    jpa:
+        hibernate:
+            ddl-auto: update
+server:
+    port: 8080
