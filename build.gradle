@@ -1,0 +1,12 @@
+buildscript {
+    repositories { mavenCentral() }
+    dependencies { classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE" }
+}
+
+['constants.gradle'].each { apply from: it }
+app.plugins.each { apply plugin: it }
+app.dependencies.each { k, v -> v.each { dependencies.add(k, it) } }
+
+repositories { mavenCentral() }
+
+task wrapper(type: Wrapper) { gradleVersion(app.wrapper.version) }
